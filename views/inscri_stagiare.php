@@ -1,5 +1,5 @@
 <?php 
-$title = 'Inscription des stagiares' ; 
+$title = 'Inscription des stagiaires' ; 
 ob_start() ; 
 ?>
     <form class="form-box" action="index.php?action=create" method='POST' enctype="multipart/form-data">

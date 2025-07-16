@@ -5,8 +5,8 @@ ob_start() ;
 ?> 
 <div class="search">
     <input type="text" id="search" placeholder='shercher un stagier'>
+    <a href="index.php?action=create_note" class="sans-note">Stagiaires non notés</a>  
 </div>
-<a href="index.php?action=create_note">afficher les stagiers qui n'est pas un note evaluation</a>  
 <table id='tb'>
     <thead>
         <th>id stagiaire</th>

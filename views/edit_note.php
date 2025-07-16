@@ -34,10 +34,10 @@ ob_start() ;
         </div>
         <div class="form-group">
             <label for="photo_stagiaire">Note stagiaire</label>
-            <input type="number" name="note" id="note" class="form-control" value='<?=$stagiaire->note?>' step="0.1">
+            <input type="number" name="note" id="note" class="form-control" value='<?=$stagiaire->note?>' step="0.1" min="0" max="20">
         </div>
         <div class="form-group">
-            <input type="submit" value="Mdifier" class="btn-submit">
+            <input type="submit" value="Modifier" class="btn-submit">
         </div>
     </form>
 <?php 

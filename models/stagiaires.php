@@ -21,12 +21,12 @@ function delete($id) {
 // inseére un stagire sur la base de donnée 
 function  creat(){
     $pdo = connection_database() ; 
-    $nom = $_POST['nom'] ; 
-    $prenom = $_POST['prenom'] ; 
-    $email = $_POST['email'] ; 
+    $nom = strtolower( $_POST['nom'] ); 
+    $prenom = strtolower($_POST['prenom'] ); 
+    $email = strtolower($_POST['email'] ); 
     $tel = $_POST['tel'] ; 
     $data_naissance = $_POST['data_naissance'] ; 
-    $photo_stagiaire_name = $_POST['nom'];
+    $photo_stagiaire_name = strtolower($_POST['nom']);
     $photo_stagiaire = $_FILES['photo_stagiare']["tmp_name"];
     $chemine = "views/images/$photo_stagiaire_name.png" ; 
     move_uploaded_file($photo_stagiaire,$chemine) ;  

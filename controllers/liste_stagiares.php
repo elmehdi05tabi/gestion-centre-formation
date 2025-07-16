@@ -19,6 +19,10 @@ function indexAction(){
 function deleteAction() {
     require_once("views/delete.php") ; 
 }
+// afficher la page menu pour choixi la derection 
+function menuAction() {
+    require_once("views/menu.php") ; 
+}
 // suprimer le stagiare
 function destroyAction() {
     $id = $_GET['id'] ; 
@@ -94,7 +98,6 @@ function viewNote() {
     $id_formation = $_GET['id_formation']  ;
     $stagiaire = view_stg($id) ; 
     $matieres = matieres($id_formation) ; 
-    print_r($stagiaire) ; 
     require_once("views/ajouter_note.php") ; 
 }
 function createNoteAction() {

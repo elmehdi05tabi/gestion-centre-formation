@@ -1,5 +1,5 @@
 <?php 
-$title = 'modifier la note d\'evaluation ' ;
+$title = 'Ajouter la note d\'évaluation ' ;
 $id = $_GET['id'] ;  
 ob_start() ; 
 ?>
@@ -34,10 +34,10 @@ ob_start() ;
         </div>
         <div class="form-group">
             <label for="photo_stagiaire">Note stagiaire</label>
-            <input type="number" name="note" id="note" class="form-control"  step="0.1">
+            <input type="number" name="note" id="note" class="form-control"  step="0.1" min="0" max="20">
         </div>
         <div class="form-group">
-            <input type="submit" value="Mdifier" class="btn-submit">
+            <input type="submit" value="Ajouter La Note" class="btn-submit" >
         </div>
     </form>
 <?php 

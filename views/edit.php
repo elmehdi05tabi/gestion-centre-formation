@@ -41,7 +41,7 @@ ob_start() ;
             </select>
         </div>
         <div class="form-group">
-            <input type="submit" value="Mdifier" class="btn-submit">
+            <input type="submit" value="Modifier" class="btn-submit">
         </div>
     </form>
 <?php 

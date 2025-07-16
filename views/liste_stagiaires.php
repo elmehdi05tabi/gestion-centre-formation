@@ -1,10 +1,10 @@
 <!-- afficher la liste des stagiaires -->
 <?php 
-$title = 'liste des stagiares' ; 
+$title = 'liste des stagiaires' ; 
 ob_start() ; 
 ?> 
 <div class="search">
-    <input type="text" id="search" placeholder='shercher un stagier'>
+    <input type="text" id="search" placeholder='recherche un stagier'>
 </div>
 <table id='tb'>
     <thead>
@@ -12,9 +12,9 @@ ob_start() ;
         <th>nom</th>
         <th>prenom</th>
         <th>email</th>
-        <th>tel</th>
+        <th>telephone</th>
         <th>formation</th>
-        <th>data de naissence</th>
+        <th>date de naissence</th>
         <th>photo de stagiaire</th>
         <th>action</th>
     </thead>
@@ -28,7 +28,7 @@ ob_start() ;
                 <td class='Tel'><?= $stagiare->tel?></td>
                 <td class='nomFormation'><?= $stagiare->nom_formation?></td>
                 <td class='dateNaissance'><?= $stagiare->date_naissance?></td>
-                <td class='PhotoStagiaire'><img src="<?= $stagiare->photo_stagier?>d" alt="stagire image"></td>
+                <td class='PhotoStagiaire'><img src="<?= $stagiare->photo_stagier?>" alt="stagire image"></td>
                 <td>
                     <a href="index.php?action=edit&id=<?= $stagiare->id_stagiaire?>">modifier</a>
                     <a href="index.php?action=delete&id=<?= $stagiare->id_stagiaire?>">suprimer</a>

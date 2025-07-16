@@ -19,7 +19,7 @@ ob_start() ;
                 <td class='prenom'><?= $stagiare->prenom?></td>
                 <td class='nomFormation'><?= $stagiare->nom_formation?></td>
                 <td>
-                    <a href="index.php?action=ajouter_note&id=<?= $stagiare->id_stagiaire?>&id_formation=<?=$stagiare->id_formation?>">ajouter la note</a>
+                    <a href="index.php?action=ajouter_note&id=<?= $stagiare->id_stagiaire?>&id_formation=<?=$stagiare->id_formation?>"class="ajouter-note" >ajouter la note</a>
                 </td>
             </tr> 
             <?php endforeach ; ?>

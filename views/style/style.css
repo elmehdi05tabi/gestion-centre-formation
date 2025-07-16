@@ -1,0 +1,260 @@
+*{
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --textColor : rgba(3, 22, 66, 0.989) ; 
+    --background : rgb(25, 199, 243) ; 
+    --padding : 10px ; 
+    --text-size : 18px ; 
+}
+body {
+    background-color: #f1f1f1;
+}
+.container  {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+/* start header */
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: var(--background);
+    padding: var(--padding);
+}
+header .logo img{
+    width: 200px;
+}
+header nav {
+    width: 60%;
+}
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+nav ul li {
+    position: relative;
+}
+nav ul li a {
+    text-decoration: none;
+    color: var(--textColor);
+    font-size: var(--text-size);
+    text-transform: capitalize;
+    margin-left:5px ;
+}
+nav ul li a::after{
+    content: "";
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 2px;
+    bottom:0 ;
+    left: 0;
+    transform: scaleX(0);
+}
+nav ul li a:hover::after{
+    transition: .5s ease-in-out;
+    transform: scaleX(1);
+}
+/* styles formulaire des amins  */
+
+.admin-form {
+    margin-top: 5rem;
+    display: grid;
+    /* align-items: center; */
+    justify-content: center;
+}
+.admin-form  label {
+    font-size: var(--text-size);
+    color: var(--textColor);
+    text-transform: capitalize;
+    margin-top: 2rem;
+}
+.admin-form  input {
+    width:400px ;
+    padding: var(--padding);
+    border: none;
+    background-color: var(--background);
+    color: var(--textColor);
+    font-size: var(--text-size);
+    border-radius: 5px;
+    box-shadow:1px 1px 5px rgb(123, 123, 123) ; 
+}
+.admin-form  input:last-child{
+    background-color: rgb(245, 248, 248);
+    margin-top: 2rem;
+    color: var(--textColor);
+    box-shadow:1px 1px 4px var(--background) ; 
+    transition: background 0.5s;
+    text-transform: capitalize;
+}
+.admin-form  input:last-child:hover{
+    background-color: var(--background);
+    color: white;
+}
+.admin-form  input:focus{
+    outline: none;
+}
+/* style le titre */
+.title {
+    text-transform: capitalize;
+    color: var(--background);
+    margin: 2rem 0 2rem 0;
+    font-size: 35px;
+    position: relative;
+}
+.title::after{
+    content :"" ; 
+    position: absolute;
+    background-color: var(--background);
+    width: 100%;
+    height: 3px;
+    bottom: -10;
+    left: 0;
+}
+
+/* style la rocharche */
+#search {
+    width: 500px;
+    padding: calc(var(--padding));
+    border: none;
+    background-color:var(--background); 
+    border-radius: 4px;
+    box-shadow: 1px 1px 5px var(--textColor);
+    text-align: center;
+    font-size: var(--text-size);
+}
+#search:focus{
+    outline: none;
+}
+#search::placeholder{
+    content: icon;
+    color: white;
+}
+/* style les tableaux */
+#tb {
+    width: 100%;
+    margin: auto;
+    margin-top: 2rem;
+}
+#tb th{
+    background-color: var(--background);
+    font-size: var(--text-size);
+    color: var(--textColor);
+    padding:var(--padding) ; 
+    text-transform : capitalize ; 
+}
+#tb tbody tr{
+    background-color: #ddd;
+    border-top: 1px solid var(--background);
+}
+#tb tbody tr td {
+    color: var(--textColor);
+    padding:var(--padding) ; 
+    text-transform : capitalize ; 
+    text-align: center;
+    font-size : var(--text-size)
+}
+#tb tbody tr td img {
+    width: 50px;
+    height: 50px;
+}
+#tb tbody tr td a:first-child {
+    background-color: rgb(239, 241, 241);
+    box-shadow: 1px 1px 5px rgb(14, 239, 126);
+    padding: 10px;
+    border-radius : 5px ; 
+    text-decoration:none ;
+    color: rgb(14, 239, 126) ;
+    transition: background 300ms ;
+}
+#tb tbody tr td a:first-child:hover {
+    background-color: rgb(14, 239, 126);
+    box-shadow: 1px 1px 5px #eee;
+    color: rgb(239, 241, 241) ;
+    margin-top: -2px;
+}
+#tb tbody tr td a:first-child:hover {
+    background-color: rgb(14, 239, 126);
+    box-shadow: 1px 1px 5px #eee;
+    color: rgb(239, 241, 241) ;
+    margin-top: -2px;
+}
+
+#tb tbody tr td a:last-child {
+    background-color: rgb(239, 241, 241);
+    box-shadow: 1px 1px 5px rgb(235, 24, 48);
+    padding: 10px;
+    border-radius : 5px ; 
+    text-decoration:none ;
+    color:  rgb(235, 24, 48);
+    transition: background 300ms;
+}
+#tb tbody tr td a:last-child:hover {
+    background-color: rgb(235, 24, 48);
+    box-shadow: 1px 1px 5px #eee;
+    color: rgb(239, 241, 241) ;
+    margin-top: -2px;
+}
+/* style les formulaire*/
+form label {
+    color: var(--textColor);
+    font-size: var(--text-size);
+    display: block;
+    text-transform: capitalize;
+}  
+form input,select {
+    width: 400px;
+    padding: var(--padding);
+    border: none;
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px var(--background);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    transition: transform 300ms;
+    color: var(--textColor);
+} 
+form input:focus{
+    outline: none;
+    background-color: var(--background);
+    transform:scaleX(1.1);
+}
+form input[type="submit"]:hover{
+    background-color: var(--background);
+    color: white;
+}
+.sans-note {
+    text-decoration: none;
+    font-size: var(--text-size);
+    color: var(--textColor);
+    background-color:#eee;
+    box-shadow: 1px 1px 4px var(--background); 
+    padding: var(--padding);
+    border-radius: 5px;
+    margin-left:1rem ; 
+    color: var(--background);
+    transition: background 300ms;
+}
+.sans-note:hover{
+    background-color:var(--background);
+    color: #eee;
+}
+.ajouter-note{
+   background-color: rgb(239, 241, 241) !important;
+    box-shadow: 1px 1px 5px rgb(14, 239, 126) !important;
+    padding: 10px;
+    border-radius : 5px ; 
+    text-decoration:none ;
+    color: rgb(14, 239, 126) !important ;
+    transition: background 300ms ;
+}
+.ajouter-note:hover{
+     background-color: rgb(14, 239, 126) !important;
+    box-shadow: 1px 1px 5px #eee;
+    color: rgb(239, 241, 241) !important ;
+    margin-top: -2px;
+}
